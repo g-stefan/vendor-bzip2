@@ -1,0 +1,8 @@
+--exe bzip2recover
+--no-default-source
+--src-c=source/bzip2recover.c
+--use-lib=:libbz2.static
+--install-project=bzip2
+--install-dev
+--no-version
+--dependency-license=bzip2

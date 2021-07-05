@@ -1,0 +1,17 @@
+--dll libbz2
+--no-default-source
+--src-c=source/blocksort.c
+--src-c=source/huffman.c
+--src-c=source/crctable.c
+--src-c=source/randtable.c
+--src-c=source/compress.c
+--src-c=source/decompress.c
+--src-c=source/bzlib.c
+--include-path=include
+--install-include-direct
+--def-file=source/libbz2.def
+--install-project=bzip2
+--platform=win* --install-file=output/lib/libbz2.lib=lib/bzip2.lib
+--install-dev
+--no-version
+--dependency-license=bzip2

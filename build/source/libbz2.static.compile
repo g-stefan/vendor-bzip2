@@ -1,0 +1,15 @@
+--lib libbz2
+--no-default-source
+--src-c=source/blocksort.c
+--src-c=source/huffman.c
+--src-c=source/crctable.c
+--src-c=source/randtable.c
+--src-c=source/compress.c
+--src-c=source/decompress.c
+--src-c=source/bzlib.c
+--include-path=include
+--install-include-direct
+--install-project=bzip2
+--install-dev
+--no-version
+--dependency-license=bzip2
