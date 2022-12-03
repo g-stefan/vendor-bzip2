@@ -22,7 +22,8 @@ Shell.copyFile("source/bzlib.h", "output/include/bzlib.h");
 global.xyoCCExtra = function() {
 	arguments.push(
 
-	    "--inc=output/include", "--use-lib-path=output/lib",
+	    "--inc=output/include",
+	    "--use-lib-path=output/lib",
 	    "--rc-inc=output/include",
 
 	    "--inc=" + pathRepository + "/include",
