@@ -3,8 +3,7 @@ Build scripts for compiling [bzip2](https://www.sourceware.org/bzip2/) with MSVC
 
 ## License
 
-Copyright (c) Grigore Stefan
-
+Copyright (c) 2022 Grigore Stefan
 Licensed under the [MIT](LICENSE) license.
 
 **This is a compilation of different works.**
