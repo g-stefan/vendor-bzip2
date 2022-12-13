@@ -1,7 +1,7 @@
 {
 	"project": {
 		"name" : "bzip2",
-		"type" : "xyo-vendor",
+		"type" : "xyo-cpp",
 		"SPDX-License-Identifier": "LicenseRef-bzip2-1.0.8",
 		"sourceLink" : "https://www.sourceware.org/bzip2/",
 		"version" : "1.0.8"
