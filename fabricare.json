@@ -1,13 +1,17 @@
 {
-	"project": {
-		"name" : "bzip2",
+	"solution": {
+		"name" : "vendor-bzip2",
 		"type" : "xyo-cpp",
-		"SPDX-License-Identifier": "LicenseRef-bzip2-1.0.8",
-		"sourceLink" : "https://www.sourceware.org/bzip2/",
-		"version" : "1.0.8",
-		"hasRelease" : true,
-		"noVersion" : true,
-		"githubRelease" : true,
-		"githubRepository" : "vendor-bzip2"
+		"projects": [
+			{
+				"name" : "bzip2",
+				"SPDX-License-Identifier": "LicenseRef-bzip2-1.0.8",
+				"sourceLink" : "https://www.sourceware.org/bzip2/",
+				"version" : "1.0.8",
+				"noVersion" : true
+			}
+		],
+		"releaseName" : "bzip2",
+		"hasGithub" : true
 	}
 }
