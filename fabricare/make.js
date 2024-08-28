@@ -55,26 +55,30 @@ var compileProject = {
 };
 
 Shell.filePutContents("temp/" + compileProject.project + ".compile.json", JSON.encodeWithIndentation(compileProject));
-exitIf(xyoCC.apply(null, xyoCCExtra("@temp/" + compileProject.project + ".compile.json", "--lib", "--output-lib-path=output/lib", "--crt-static")));
+if(Fabricare.isStatic()){
+exitIf(xyoCC.apply(null, xyoCCExtra("@temp/" + compileProject.project + ".compile.json", "--lib", "--output-lib-path=output/lib")));
+};
+if(Fabricare.isDynamic()){
 exitIf(xyoCC.apply(null, xyoCCExtra("@temp/" + compileProject.project + ".compile.json", "--dll", "--output-bin-path=output/bin", "--output-lib-path=output/lib")));
+};
 Shell.copyFile("output/lib/libbz2.lib", "output/lib/bzip2.lib");
 
 var compileProject = {
 	"project" : "bzip2",
 	"includePath" : [ "output/include", "source" ],
 	"cSource" : [ "source/bzip2.c" ],
-	"library" : [ "libbz2.static" ]
+	"library" : [ "libbz2" ]
 };
 
 Shell.filePutContents("temp/" + compileProject.project + ".compile.json", JSON.encodeWithIndentation(compileProject));
-exitIf(xyoCC.apply(null, xyoCCExtra("@temp/" + compileProject.project + ".compile.json", "--exe", "--output-bin-path=output/bin", "--crt-static")));
+exitIf(xyoCC.apply(null, xyoCCExtra("@temp/" + compileProject.project + ".compile.json", "--exe", "--output-bin-path=output/bin")));
 
 var compileProject = {
 	"project" : "bzip2recover",
 	"includePath" : [ "output/include", "source" ],
 	"cSource" : [ "source/bzip2recover.c" ],
-	"library" : [ "libbz2.static" ]
+	"library" : [ "libbz2" ]
 };
 
 Shell.filePutContents("temp/" + compileProject.project + ".compile.json", JSON.encodeWithIndentation(compileProject));
-exitIf(xyoCC.apply(null, xyoCCExtra("@temp/" + compileProject.project + ".compile.json", "--exe", "--output-bin-path=output/bin", "--crt-static")));
+exitIf(xyoCC.apply(null, xyoCCExtra("@temp/" + compileProject.project + ".compile.json", "--exe", "--output-bin-path=output/bin")));
