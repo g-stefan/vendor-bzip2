@@ -1,5 +1,6 @@
 {
 	"solution": {
+		"namespace" : "xyo",
 		"name" : "vendor-bzip2",
 		"type" : "xyo-cpp",
 		"projects": [
